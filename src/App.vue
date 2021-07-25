@@ -1,11 +1,12 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <ar-header />
   <router-view />
 </template>
 
-<style>
-
-</style>
+<style></style>
+<script>
+import ArHeader from "./components/ar-header";
+export default {
+  components: { ArHeader },
+};
+</script>
