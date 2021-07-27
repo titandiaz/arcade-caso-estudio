@@ -1,12 +1,13 @@
 <template>
-  <header class="w-full">
+  <header class="w-full absolute top-0 left-0 z-30">
     <nav class="flex w-full">
-      <router-link class="inline-block px-10 pt-5 pb-8 bg-almost-black" to="/">
-        <img src="../assets/images/logo.png" alt="logo" />
-      </router-link>
-      <div
-        class="flex justify-end items-center pt-2 w-full pr-2 md:pr-4 lg:pr-10"
+      <router-link
+        class="inline-block px-[60px] pt-5 pb-[30px] bg-almost-black"
+        to="/"
       >
+        <img src="../assets/images/logo.png" alt="logo" class="max-w-max" />
+      </router-link>
+      <div class="flex justify-end items-center w-full pr-2 md:pr-4 lg:pr-10">
         <router-link
           class="
             nav-menu-link
@@ -18,6 +19,8 @@
             flex
             items-center
             relative
+            text-white
+            pt-3
           "
           v-for="route in routes"
           :to="route.path"
