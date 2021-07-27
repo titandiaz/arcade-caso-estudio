@@ -2,7 +2,10 @@
   "name": "arcade-caso-estudio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://titandiaz.github.io/arcade-caso-estudio",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -31,6 +34,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
+    "gh-pages": "^3.2.3",
     "postcss": "^7.0.36",
     "prettier": "^2.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
