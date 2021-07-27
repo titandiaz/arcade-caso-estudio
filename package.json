@@ -2,7 +2,7 @@
   "name": "arcade-caso-estudio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://titandiaz.github.io/arcade-caso-estudio",
+  "homepage": "https://titandiaz.github.io/arcade-caso-estudio",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
