@@ -1,6 +1,6 @@
 # [Arcade-caso-estudio](https://titandiaz.github.io/arcade-caso-estudio/)
 
-Vista Home desarrollada con el framework Vue 3, basado en el diseño de la página web [Arcade](https://technext.github.io/arcade/),
+Caso de estudio desarrollado con el framework Vue 3, basado en el diseño de la página web [Arcade](https://technext.github.io/arcade/),
 
 Las secciones de diseño implementadas fueron:
 ## Home
