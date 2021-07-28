@@ -1,12 +1,10 @@
 <template>
   <ar-header />
   <router-view />
+  <ar-footer />
 </template>
 
-<style></style>
-<script>
+<script setup>
 import ArHeader from "./components/ar-header";
-export default {
-  components: { ArHeader },
-};
+import ArFooter from "./components/ar-footer";
 </script>
