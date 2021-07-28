@@ -5,12 +5,9 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import ArContactForm from "../components/ar-contact-form.vue";
 import arPageHeader from "../components/ar-page-header.vue";
-export default {
-  components: { arPageHeader, ArContactForm },
-};
 </script>
 
 <style scoped></style>

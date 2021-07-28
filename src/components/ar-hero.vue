@@ -83,47 +83,29 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import ArSidebar from "./ar-sidebar.vue";
 import ArButton from "./ar-button.vue";
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-    ArSidebar,
-    FontAwesomeIcon,
-    ArButton,
-  },
 
-  setup() {
-    const navigationOptions = {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    };
+const navigationOptions = {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+};
 
-    const currentPosition = ref(1);
-    const numberOfSliders = 2;
+const currentPosition = ref(1);
+const numberOfSliders = 2;
 
-    const onSlideChange = (swiper) => {
-      if (swiper.activeIndex === numberOfSliders + 1) {
-        currentPosition.value = 1;
-      } else if (swiper.activeIndex === 0) {
-        currentPosition.value = numberOfSliders;
-      } else {
-        currentPosition.value = swiper.activeIndex;
-      }
-    };
-
-    return {
-      onSlideChange,
-      navigationOptions,
-      currentPosition,
-      numberOfSliders,
-    };
-  },
+const onSlideChange = (swiper) => {
+  if (swiper.activeIndex === numberOfSliders + 1) {
+    currentPosition.value = 1;
+  } else if (swiper.activeIndex === 0) {
+    currentPosition.value = numberOfSliders;
+  } else {
+    currentPosition.value = swiper.activeIndex;
+  }
 };
 </script>
 

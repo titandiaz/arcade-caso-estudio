@@ -4,17 +4,8 @@
   <ar-services />
 </template>
 
-<script>
+<script setup>
 import ArArchitectureStudio from "../components/ar-architecture-studio.vue";
 import ArHero from "../components/ar-hero.vue";
 import ArServices from "../components/ar-services.vue";
-
-export default {
-  name: "Home",
-  components: {
-    ArHero,
-    ArArchitectureStudio,
-    ArServices,
-  },
-};
 </script>

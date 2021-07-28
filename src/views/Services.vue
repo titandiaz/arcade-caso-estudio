@@ -2,9 +2,6 @@
   <ar-page-header />
 </template>
 
-<script>
+<script setup>
 import arPageHeader from "../components/ar-page-header.vue";
-export default {
-  components: { arPageHeader },
-};
 </script>

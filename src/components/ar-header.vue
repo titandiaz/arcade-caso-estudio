@@ -38,19 +38,11 @@
   </header>
 </template>
 
-<script>
+<script setup>
 import { useRouter, RouterLink } from "vue-router";
-export default {
-  name: "ar-header",
-  components: { RouterLink },
 
-  setup() {
-    const router = useRouter();
-    const { routes } = router.options;
-
-    return { routes };
-  },
-};
+const router = useRouter();
+const { routes } = router.options;
 </script>
 
 <style scoped>

@@ -24,43 +24,36 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-export default {
-  components: {
-    FontAwesomeIcon,
+
+const iconList = [
+  {
+    name: "pinterest",
+    style: "fab",
+    link: "https://co.pinterest.com/",
   },
-  setup() {
-    const iconList = [
-      {
-        name: "pinterest",
-        style: "fab",
-        link: "https://co.pinterest.com/",
-      },
-      {
-        name: "linkedin-in",
-        style: "fab",
-        link: "https://www.linkedin.com/",
-      },
-      {
-        name: "instagram",
-        style: "fab",
-        link: "https://www.instagram.com/",
-      },
-      {
-        name: "facebook-f",
-        style: "fab",
-        link: "https://www.facebook.com/",
-      },
-      {
-        name: "twitter",
-        style: "fab",
-        link: "https://www.twitter.com/",
-      },
-    ];
-    return { iconList };
+  {
+    name: "linkedin-in",
+    style: "fab",
+    link: "https://www.linkedin.com/",
   },
-};
+  {
+    name: "instagram",
+    style: "fab",
+    link: "https://www.instagram.com/",
+  },
+  {
+    name: "facebook-f",
+    style: "fab",
+    link: "https://www.facebook.com/",
+  },
+  {
+    name: "twitter",
+    style: "fab",
+    link: "https://www.twitter.com/",
+  },
+];
 </script>
 
 <style></style>

@@ -29,11 +29,8 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import arButton from "./ar-button.vue";
-export default {
-  components: { arButton },
-};
 </script>
 
 <style scoped></style>

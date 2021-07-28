@@ -11,16 +11,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useRouter } from "vue-router";
-export default {
-  setup() {
-    const router = useRouter();
-    const { currentRoute } = router;
 
-    return { currentRoute };
-  },
-};
+const router = useRouter();
+const { currentRoute } = router;
 </script>
 
 <style></style>

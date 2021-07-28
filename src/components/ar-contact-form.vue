@@ -2,10 +2,18 @@
   <ar-highlighted-text class="mt-12" :text="'Get in touch'" />
   <form @submit="sendInfo" class="pt-12 grid grid-cols-12 mb-16">
     <div class="col-span-3 hidden lg:block text-purplish-grey">
-      <label for="asunto" class="mb-6 inline-block mt-4 py-1">Address: Lorem ipsum dolor</label>
-      <label for="email" class="mb-8 inline-block py-1">Correo: yourmail@gmail.com</label>
-      <label for="phone" class="mb-10 inline-block py-1">Phone: +57 345 7953 32453</label>
-      <label for="message" class="mb-4 inline-block py-1">Message: Lorem ipsum dolor, voluptatem tempora.</label>
+      <label for="asunto" class="mb-6 inline-block mt-4 py-1"
+        >Address: Lorem ipsum dolor</label
+      >
+      <label for="email" class="mb-8 inline-block py-1"
+        >Correo: yourmail@gmail.com</label
+      >
+      <label for="phone" class="mb-10 inline-block py-1"
+        >Phone: +57 345 7953 32453</label
+      >
+      <label for="message" class="mb-4 inline-block py-1"
+        >Message: Lorem ipsum dolor, voluptatem tempora.</label
+      >
     </div>
     <div class="col-span-12 lg:col-span-9">
       <input
@@ -64,45 +72,38 @@
   </form>
 </template>
 
-<script>
+<script setup>
 import { computed, reactive } from "vue";
 import useVuelidate from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
 import ArButton from "./ar-button.vue";
 import arHighlightedText from "./ar-highlighted-text.vue";
-export default {
-  components: { arHighlightedText, ArButton },
 
-  setup() {
-    const state = reactive({
-      asunto: "",
-      email: "",
-      phone: "",
-      message: "",
-      termsAccepted: false,
-    });
-    const rules = computed(() => {
-      return {
-        asunto: { required },
-        email: { required, email },
-        message: { required },
-        termsAccepted: { accepted: (val) => val === true },
-      };
-    });
+const state = reactive({
+  asunto: "",
+  email: "",
+  phone: "",
+  message: "",
+  termsAccepted: false,
+});
+const rules = computed(() => {
+  return {
+    asunto: { required },
+    email: { required, email },
+    message: { required },
+    termsAccepted: { accepted: (val) => val === true },
+  };
+});
 
-    const v$ = useVuelidate(rules, state);
+const v$ = useVuelidate(rules, state);
 
-    const sendInfo = (e) => {
-      e.preventDefault();
-      v$.value.$validate().then((resp) => {
-        if (resp) {
-          alert(JSON.stringify(state, null, 3));
-        }
-      });
-    };
-
-    return { v$, sendInfo, state };
-  },
+const sendInfo = (e) => {
+  e.preventDefault();
+  v$.value.$validate().then((resp) => {
+    if (resp) {
+      alert(JSON.stringify(state, null, 3));
+    }
+  });
 };
 </script>
 

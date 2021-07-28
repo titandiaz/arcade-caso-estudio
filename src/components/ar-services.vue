@@ -1,5 +1,5 @@
 <template>
-  <section class="container pt-28">
+  <section class="container pt-28 pb-[100px]">
     <ar-highlighted-text class="mb-[75px]" :text="'Services'" />
     <div class="grid gap-11 grid-cols-1 md:grid-cols-8 lg:grid-cols-12">
       <div
@@ -61,11 +61,8 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import arHighlightedText from "./ar-highlighted-text.vue";
-export default {
-  components: { arHighlightedText },
-};
 </script>
 
 <style scoped>
